@@ -10,5 +10,37 @@
     <h1>JavaScript Functions</h1>
     <p>Functions aree the piece of code that can be used again and again in code.</p>
     
+    <p id="demo"> </p>
+    <h2>convert Farenheight to Celcius</h2>
+    <p class="temp_disp"></p>
+
+    <script>
+        function logger () {
+            console.log("My name is Muhammad Hamza");
+        }
+        // Calling that Function
+        logger();
+        logger();
+
+        function fruitsjuice (apples, mangoes) {
+            const juice = `Make a juice of ${apples} apples and ${mangoes} mangoes for me.`;
+            return juice;
+            // if we do not return any value then the function does not do anything.
+        }
+
+        const print_it = fruitsjuice (4, 1);
+        document.getElementById("demo").innerText = print_it;
+        // Convert Farenheit To Celcius
+        let temp = prompt("write value in Farenheit.", "52");
+
+        function toCelcius (faren) {
+            let celcius = (faren -32) * 5/9;
+            return celcius;
+        }
+        let print_temp = toCelcius (temp);
+        // console.log(print_temp);
+        document.getElementsByClassName("temp_disp")[0].innerText = `your Value in Celcius is ${print_temp}`;
+
+    </script>
 </body>
 </html>
