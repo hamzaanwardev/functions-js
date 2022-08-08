@@ -13,6 +13,12 @@
     <p id="demo"> </p>
     <h2>convert Farenheight to Celcius</h2>
     <p class="temp_disp"></p>
+    <!-- <form>
+        <input type="number" id="farenhiet" placeholder="Enter temprature in Farenhiet">
+        <input type="number" id="birthy" placeholder="Enter Your BirthYear">
+        <input type="submit" value="submit">
+    </form> -->
+
 
     <h2>Functions Declarations and Functions Expressions</h2>
 
@@ -34,6 +40,7 @@
         document.getElementById("demo").innerText = print_it;
         // Convert Farenheit To Celcius
         let temp = prompt("write value in Farenheit.", "52");
+        // let temp = document.getElementById("farenhiet").value;
 
         function toCelcius (faren) {
             let celcius = (faren -32) * 5/9;
@@ -42,6 +49,17 @@
         let print_temp = toCelcius (temp);
         // console.log(print_temp);
         document.getElementsByClassName("temp_disp")[0].innerText = `your Value in Celcius is ${print_temp}`;
+
+        // Function Declarations and Functiions Expressions
+        // calculate age
+        function calcAge(birthyear) {
+            var ageT = new Date().getFullYear() - birthyear;
+            return ageT
+        }
+        // console.log(calcAge(document.getElementById("birthy").value));
+        console.log(calcAge(prompt("write your BirthYear", "1997")));
+
+
 
     </script>
 </body>
