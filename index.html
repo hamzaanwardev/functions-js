@@ -13,14 +13,13 @@
     <p id="demo"> </p>
     <h2>convert Farenheight to Celcius</h2>
     <p class="temp_disp"></p>
-    <!-- <form>
-        <input type="number" id="farenhiet" placeholder="Enter temprature in Farenhiet">
-        <input type="number" id="birthy" placeholder="Enter Your BirthYear">
-        <input type="submit" value="submit">
-    </form> -->
+
 
 
     <h2>Functions Declarations and Functions Expressions</h2>
+    <p>In The Function Declarations we can call the function first and then we can declare a function it's up to you. But In Function Expression if we call the function first and after that we make a function, it will give us an error.</p>
+    <p class="yourAge"></p>
+    <p id="countryAge"></p>
 
     <script>
         function logger () {
@@ -50,15 +49,24 @@
         // console.log(print_temp);
         document.getElementsByClassName("temp_disp")[0].innerText = `your Value in Celcius is ${print_temp}`;
 
-        // Function Declarations and Functiions Expressions
+        // Function Declarations and Functions Expressions
+
         // calculate age
+        // Function Declaration
         function calcAge(birthyear) {
             var ageT = new Date().getFullYear() - birthyear;
             return ageT
         }
         // console.log(calcAge(document.getElementById("birthy").value));
-        console.log(calcAge(prompt("write your BirthYear", "1997")));
+        document.querySelector(".yourAge").innerText = (`Your Age is ${calcAge(prompt("write your BirthYear", "1997"))}`);
 
+        // Function Expressions
+        const calcAge2 = function (birthyear) {
+            var ageT = new Date().getFullYear() - birthyear;
+            return ageT
+        }
+        // console.log(calcAge(document.getElementById("birthy").value));
+        document.getElementById("countryAge").innerText = (`Your Country Age is ${calcAge2(prompt("write your BirthYear of Your Country", "1947"))}`);
 
 
     </script>
